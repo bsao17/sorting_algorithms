@@ -1,7 +1,5 @@
 from random import randint
 
-l = [5, 8, 10, 2, 1]
-
 
 def selectionSort(l):
     for unsorted_index in range(0, len(l)):
@@ -13,14 +11,15 @@ def selectionSort(l):
                 min_index = i
         l[min_index] = l[unsorted_index]
         l[unsorted_index] = min
-    print(l)
+    print(f"sorted list: {l}")
 
 
 def generateRandomListSorted(nbr, min, max):
     l = []
     for i in range(nbr):
         l.append(randint(min, max))
+    print(f"unsorted list: {l}")
     selectionSort(l)
 
 
-generateRandomListSorted(15, 2, 25)
+generateRandomListSorted(10, 2, 15)
